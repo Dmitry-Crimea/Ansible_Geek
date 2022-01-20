@@ -1,0 +1,14 @@
+---
+
+- name: 'CONFIG | configure vsftpd'
+  import_tasks: "config.yml"
+  tags: [ 'vsftpd', 'vsftpd:config' ]
+
+- name: 'INSTALL | install vsftpd'
+  import_tasks: "install.yml"
+  tags: [ 'vsftpd', 'vsftpd:install' ]
+
+- name: 'PREREQ | prereq vsftpd'
+  import_tasks: "prereq.yml"
+  tags: ['vsftpd', 'vsftpd::prereq' ]
+
