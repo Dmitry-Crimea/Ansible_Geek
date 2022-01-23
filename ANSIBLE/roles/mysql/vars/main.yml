@@ -1,0 +1,9 @@
+---
+
+# reload mysql
+- name: reload mysql
+  service:
+    name: mysql
+    state: started
+    enabled: yes
+  become: yes

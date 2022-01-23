@@ -1,17 +1,17 @@
 ---
 
-# install vsftpd
-- name: install vsftpd
+# install mysql
+- name: install mysql
   yum:
-    name: vsftpd
+    name: mysql
     state: present
     update_cache: yes
   become: yes
 
 #start mysql
-- name: Start vsftpd
+- name: Start msql
   service:
-    name: vsftpd
+    name: mysql
     state: started
     enabled: yes
   become: yes
