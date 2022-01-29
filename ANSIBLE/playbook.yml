@@ -1,0 +1,6 @@
+---
+- hosts: test_server
+  gather_facts: False
+  roles:
+    - nginx
+    - mysql

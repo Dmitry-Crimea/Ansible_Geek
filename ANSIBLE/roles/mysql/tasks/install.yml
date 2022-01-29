@@ -1,0 +1,10 @@
+---
+
+- name: install mysql-server
+  block:
+    - name: instal mysql-server
+      yum:
+        name: mysql-server
+        state: present
+        update_cache: yes
+      become: True
