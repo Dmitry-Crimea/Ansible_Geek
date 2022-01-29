@@ -9,6 +9,13 @@
         update_cache: yes
       become: True
 
+    - name: start and enabled mysql-server
+      service:
+        name: mysqld
+        state: started
+        enabled: yes
+      become: True
+
     - name: install pymysql
       yum:
         name:
