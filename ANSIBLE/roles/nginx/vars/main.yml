@@ -1,4 +1,2 @@
 ---
-- hosts: test_server
-  remote_user: it
-  ask_pass: True
+ root_dir: "/srv/wordpress/"

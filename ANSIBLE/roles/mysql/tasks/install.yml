@@ -8,3 +8,21 @@
         state: present
         update_cache: yes
       become: True
+
+    - name: install pymysql
+      yum:
+        name:
+          - mysql-devel
+          - python3-PyMySQL
+          - python39
+          - python39-devel
+          - python39-pip
+          - gcc
+        state: present
+        update_cache: yes
+
+    - name: pip install pymysql
+      pip:
+        name: PyMySQL
+        state: present
+        executable: pip3

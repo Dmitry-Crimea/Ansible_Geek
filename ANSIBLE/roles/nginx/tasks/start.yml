@@ -2,6 +2,6 @@
 - name: start nginx
   service:
     name: nginx
-    state: start
+    state: started
     enabled: yes
   become: True

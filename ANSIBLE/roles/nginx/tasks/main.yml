@@ -6,5 +6,10 @@
 - name: 'START | start nginx'
   import_tasks: "start.yml"
 
-- name: 'SELinux | SELinux config'
-  import_tasks: "selinux.yml"
+- name: 'PREREQ | prereq nginx'
+  import_tasks: "prereq.yml"
+
+- name: 'CONFIG| config nginx'
+  import_tasks: "config.yml"
+
+
