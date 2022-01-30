@@ -1,0 +1,10 @@
+---
+
+- name: update nginx config
+  template:
+    src: templates/ngin .conf.j2
+    dest: /etc/nginx/nginx.comf
+    owner: nginx
+  notify:
+    - reload nginx
+  become: True
