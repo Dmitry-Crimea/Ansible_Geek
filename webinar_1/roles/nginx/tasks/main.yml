@@ -1,0 +1,7 @@
+---
+
+- name: 'INSTALL | install and start nginx'
+  import_tasks: "install.yml"
+
+- name: 'PREREQ | create directory for nginx files'
+  import_tasks: "prereq.yml"

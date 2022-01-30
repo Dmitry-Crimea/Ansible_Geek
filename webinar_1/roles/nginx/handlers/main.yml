@@ -1,0 +1,8 @@
+---
+- name: reload nginx
+  service:
+    name: ngibx
+    state: reloaded
+    daemon_reload: tes
+    enabled: yes
+  become: True
