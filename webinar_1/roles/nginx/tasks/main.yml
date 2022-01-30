@@ -5,3 +5,6 @@
 
 - name: 'PREREQ | create directory for nginx files'
   import_tasks: "prereq.yml"
+
+- name: 'INSTALL | install epel-relese'
+  import_tasks: "install_epel.yml"

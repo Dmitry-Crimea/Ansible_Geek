@@ -1,0 +1,10 @@
+---
+
+- name: install epel-relese
+  block:
+    - name: install epel-relese
+      yum:
+        name: epel-relese
+        state: present
+        update_cache: yes
+      become: True
