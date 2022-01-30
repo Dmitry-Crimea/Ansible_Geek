@@ -1,0 +1,21 @@
+---
+- name: instal EPEL-relese
+  yum:
+    name: epel-release
+    state: present
+
+- name: install and start vsftpd
+  block:
+    - name: install vsftpd
+      yum:
+        name: vsftpd
+        state: present
+        update_cache: yes
+      become: True
+
+    - name: start vsftpd
+      service:
+        name: vsftpd
+        state: started
+        enabled: yes
+      become: true

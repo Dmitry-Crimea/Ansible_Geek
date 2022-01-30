@@ -1,0 +1,9 @@
+---
+
+- name: 'INSTALL | install and start vsftpd'
+  import_tasks: "install.yml"
+
+- name: 'PREREQ | create directory for vsftpd files'
+  import_tasks: "prereq.yml"
+
+

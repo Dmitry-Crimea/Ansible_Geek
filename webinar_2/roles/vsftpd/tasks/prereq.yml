@@ -1,0 +1,11 @@
+---
+- name: create directory for vsftpd files
+  file:
+    path: "{{ root_dir }}"
+    state: directory
+    mode: 2755
+    owner: root
+    group: root
+  notify:
+    - reload vsftpd
+  become: True
