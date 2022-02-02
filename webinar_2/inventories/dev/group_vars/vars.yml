@@ -1,2 +1,2 @@
 ---
-root_dir: "/data/nginx/html"
+root_dir: "/srv/ftp/"
