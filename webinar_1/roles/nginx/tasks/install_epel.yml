@@ -2,9 +2,9 @@
 
 - name: install epel-relese
   block:
-    - name: install epel-relese
+    - name: install epel-release
       yum:
-        name: epel-relese
+        name: epel-release
         state: present
         update_cache: yes
       become: True

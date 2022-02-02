@@ -6,7 +6,6 @@
       yum:
         name: nginx
         state: present
-        update_cahche: yes
       become: True
 
     - name: start nginx
