@@ -3,6 +3,6 @@
   service:
     name: ngibx
     state: reloaded
-    daemon_reload: tes
+    daemon_reload: yes
     enabled: yes
   become: True
