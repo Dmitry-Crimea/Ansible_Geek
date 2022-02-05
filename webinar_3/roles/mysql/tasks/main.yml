@@ -9,8 +9,6 @@
 - name: 'INSTALL | install and start mysql'
   import_tasks: "install.yml"
 
-- name: 'CONFIG | configure nginx'
-  import_tasks: "config.yml"
 
 
 
