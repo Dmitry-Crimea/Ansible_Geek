@@ -1,16 +1,8 @@
 ---
 
-- name: 'INSTALL | install epel-release'
-  import_tasks: "install_epel.yml"
-
-#- name: 'PREREQ | create directory for nginx files'
-#  import_tasks: "prereq.yml"
-
 - name: 'INSTALL | install and start php-fpm'
   import_tasks: "install.yml"
 
-- name: 'CONFIG | configure nginx'
-  import_tasks: "config.yml"
 
 
 
