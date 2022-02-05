@@ -1,0 +1,17 @@
+---
+
+- name: install and start mysql-server
+  block:
+    - name: install mysql-server
+      yum:
+        name: mysql-server
+        state: present
+      become: yes
+
+    - name: start mysql
+      service:
+        name: mysqld
+        state: started
+        enabled: yes
+      become: True
+

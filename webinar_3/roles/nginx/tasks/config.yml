@@ -7,10 +7,10 @@
   notify:
     - reload nginx
 
-- name: update nginx statics
-  copy:
-    src: "files/"
-    dest: "{{ root_dir }}"
-    owner: root
-  notify:
-    - reload nginx
+#- name: update nginx statics
+#  copy:
+#    src: "files/"
+#    dest: "{{ root_dir }}"
+#    owner: root
+#  notify:
+#    - reload nginx

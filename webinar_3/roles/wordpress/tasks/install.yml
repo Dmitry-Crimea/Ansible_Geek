@@ -1,0 +1,33 @@
+---
+
+- name: create dir and unpack wordpress
+  block:
+    - name: create tmp dir
+      file:
+        path: home/it/tmp
+        state: directory
+        owner: root
+        group: root
+        mode: 0755
+
+    - name: download wordpress
+      get_url:
+        url: https://wordpress.org/latest.zip
+        dest: /home/it/tmp/latest.zip
+
+    - name: unpack wordpress
+      unarchive:
+        src: https://wordpress.org/latest.zip
+        dest: /data/nginx/html
+        remote_src: yes
+        owner: root
+        group: root
+        mode: 0755
+
+    - name: start mysql
+      service:
+        name: mysqld
+        state: started
+        enabled: yes
+      become: True
+

@@ -1,0 +1,32 @@
+---
+
+- name: install and start php-fpm
+  block:
+    - name: install php-fpm
+      yum:
+        update_cache: yes
+        state: present
+        name: "{{ item }}"
+      loop:
+        - php
+        - php-cli
+        - php-fpm
+        - php-json
+        - php-pdo
+        - php-mysqlnd
+        - php-zip
+        - php-gd
+        - php-mbstring
+        - php-curl
+        - php-xml
+        - php-pear
+        - php-bcmath
+      become: yes
+
+    - name: start php-fpm
+      service:
+        name: php-fpm
+        state: started
+        enabled: yes
+      become: True
+

@@ -2,4 +2,7 @@
 - hosts: centos
   gather_facts: False
   roles:
+    - php-fpm
     - nginx
+    - mysql
+    - wordpress
