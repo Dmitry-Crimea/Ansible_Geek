@@ -1,0 +1,10 @@
+---
+- name: instal and start nginx
+  block:
+    - name: install nginx
+      yum:
+        name: nginx
+        state: present
+        update_cache: yes
+      become: True
+

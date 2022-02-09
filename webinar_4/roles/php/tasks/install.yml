@@ -1,0 +1,19 @@
+---
+- name: install php-fpm packages
+  block:
+    - name: install php-fpm packages
+      yum:
+        name:
+          - php
+          - php-common
+          - php-intl
+          - php-fpm
+          - php-mysqlnd
+          - php-json
+          - php-opcache
+          - php-mbstring
+          - php-xml
+          - php-gd
+          - php-curl
+        state: present
+      become: True

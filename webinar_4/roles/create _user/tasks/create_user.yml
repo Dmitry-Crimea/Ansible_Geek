@@ -1,0 +1,17 @@
+---
+
+- name: create new user
+  user:
+    name: "{{ deploy_user.name }}"
+    password: "{{ deploy_user.passwd | password_hash('sha512') }}"
+    state: present
+    group: whell
+    append: yes
+    shell: "/bin/bash"
+    update_password: on_create
+  when: deploy_user.groups is not defined
+
+- name: created user
+  debug:
+    msg: "new user created successfully"
+
