@@ -1,10 +1,17 @@
 ---
 
-- name: 'INSTALL | install and start nginx'
-  import_tasks: "install.yml"
+- name: 'INSTALL | install epel-release'
+  import_tasks: "install_epel.yml"
 
 - name: 'PREREQ | create directory for nginx files'
   import_tasks: "prereq.yml"
 
-- name: 'INSTALL | install epel-relese'
-  import_tasks: "install_epel.yml"
+- name: 'INSTALL | install and start nginx'
+  import_tasks: "install.yml"
+
+- name: 'CONFIG | configure nginx'
+  import_tasks: "config.yml"
+
+
+
+

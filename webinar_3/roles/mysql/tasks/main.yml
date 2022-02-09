@@ -1,7 +1,15 @@
 ---
 
-- name: 'INSTALL | install mysql-server'
+- name: 'INSTALL | install epel-release'
+  import_tasks: "install_epel.yml"
+
+- name: 'PREREQ | install pip and PyMySQL'
+  import_tasks: "prereq.yml"
+
+- name: 'INSTALL | install and start mysql'
   import_tasks: "install.yml"
 
-- name: 'CONFIG| config mysql'
-  import_tasks: "config.yml"
+
+
+
+

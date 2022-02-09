@@ -1,10 +1,8 @@
 ---
-- hosts: test_server
+- hosts: centos
   gather_facts: False
   roles:
+    - php-fpm
     - nginx
     - mysql
-    - epel
-    - php
     - wordpress
-

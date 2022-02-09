@@ -1,35 +1,17 @@
 ---
 
-- name: install mysql-server
+- name: install and start mysql-server
   block:
-    - name: instal mysql-server
+    - name: install mysql-server
       yum:
         name: mysql-server
         state: present
-        update_cache: yes
-      become: True
+      become: yes
 
-    - name: start and enabled mysql-server
+    - name: start mysql
       service:
         name: mysqld
         state: started
         enabled: yes
       become: True
 
-    - name: install pymysql
-      yum:
-        name:
-          - mysql-devel
-          - python3-PyMySQL
-          - python39
-          - python39-devel
-          - python39-pip
-          - gcc
-        state: present
-        update_cache: yes
-
-    - name: pip install pymysql
-      pip:
-        name: PyMySQL
-        state: present
-        executable: pip3

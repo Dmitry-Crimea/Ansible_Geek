@@ -3,7 +3,7 @@
   file:
     path: "{{ root_dir }}"
     state: directory
-    mode: 2755
+    mode: 0755
     owner: root
     group: root
   notify:
