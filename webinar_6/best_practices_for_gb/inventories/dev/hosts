@@ -1,0 +1,22 @@
+[loadbalancer]
+10.10.5.150
+
+[appservers]
+10.10.5.150 label=django
+10.10.5.151 label=django
+
+[consul-cluster:children]
+consul-master
+consul-server
+
+[consul-master]
+10.10.5.150
+
+[consul-server]
+10.10.5.151
+10.10.5.152
+10.10.5.153
+10.10.5.154
+
+[prometheus]
+10.10.5.151
