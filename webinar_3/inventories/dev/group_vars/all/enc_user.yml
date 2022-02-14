@@ -1,0 +1,5 @@
+---
+
+deploy_user:
+  name: admin
+  passwd: Password0312
