@@ -1,11 +1,7 @@
 ---
-- hosts: centos
+- hosts: all
 #  gather_facts: False
   roles:
-#    - nginx
-#    - mysql
-#    - epel
-#    - php
-#    - wordpress
-     - replace_separator
+    - vim
+
 
