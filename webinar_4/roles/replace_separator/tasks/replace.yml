@@ -2,5 +2,15 @@
 
 - name: replace separator
   block:
-  debug:
-    msg: ip address is {{ ansible_default_ipv4.address}}
+    - name: print name before replace
+      debug:
+        msg: "ip address before replace is: {{ ansible_default_ipv4.address }}"
+
+    - name: replace ip address
+      hostname:
+        name: "{{ ansible_default_ipv4.address | replace('.','-') }}"
+        use: systemd
+
+    - name: print name after replace
+      debug:
+        msg: "ip address after replace is: {{ ansible_hostname }}"
